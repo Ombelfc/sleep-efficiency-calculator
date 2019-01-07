@@ -11,8 +11,31 @@
         Title="SEC" Height="250" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     
     <Grid Focusable="True" Margin="3 3 3 3" DataContext="{Binding Main, Source={StaticResource Locator}}">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         
-        
+        <st:StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center" MarginBetweenChildren="10">
+            <xctk:TimeSpanUpDown Watermark="Total time spent in bed" Value="{Binding Total}" Width="150"/>
+            <xctk:TimeSpanUpDown Watermark="Time it took to fall asleep" Value="{Binding ToFallAsleep}" Width="150"/>
+            <xctk:TimeSpanUpDown Watermark="Time spent awake at time" Value="{Binding SpentAwake}" Width="150"/>
+        </st:StackPanel>
+
+        <Button Grid.Row="1" Grid.Column="0" VerticalAlignment="Center" Content="Calculate" Command="{Binding Calculate}" IsEnabled="{Binding IsCalculateEnabled}" Margin="5 5 5 5" Width="200"/>
+
+        <Grid Grid.Column="1" Grid.RowSpan="2" Background="AliceBlue">
+            <Canvas>
+                <Ellipse VerticalAlignment="Center" HorizontalAlignment="Center" Fill="{Binding FillColor}" Canvas.Top="20" Canvas.Left="60" Height="180" Width="180" Stroke="White" StrokeThickness="5"/>
+            </Canvas>
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Text="{Binding Percentage}" FontSize="30" TextAlignment="Center"/>
+        </Grid>
         
     </Grid>
     
