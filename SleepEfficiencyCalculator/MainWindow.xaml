@@ -1,12 +1,19 @@
-﻿<Window x:Class="SleepEfficiencyCalculator.MainWindow"
+﻿<Controls:MetroWindow x:Class="SleepEfficiencyCalculator.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SleepEfficiencyCalculator"
+        xmlns:Controls="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:st="http://schemas.spicytaco.io/"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="SEC" Height="250" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
+    
+    <Grid Focusable="True" Margin="3 3 3 0" DataContext="{Binding Main, Source={StaticResource Locator}}">
+        
+        
         
     </Grid>
-</Window>
+    
+</Controls:MetroWindow>
