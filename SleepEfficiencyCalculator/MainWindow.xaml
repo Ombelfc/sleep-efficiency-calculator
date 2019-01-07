@@ -10,7 +10,7 @@
         mc:Ignorable="d"
         Title="SEC" Height="250" Width="600" ResizeMode="NoResize" WindowStartupLocation="CenterScreen">
     
-    <Grid Focusable="True" Margin="3 3 3 0" DataContext="{Binding Main, Source={StaticResource Locator}}">
+    <Grid Focusable="True" Margin="3 3 3 3" DataContext="{Binding Main, Source={StaticResource Locator}}">
         
         
         
